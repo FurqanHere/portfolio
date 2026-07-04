@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-paper font-body antialiased;
+  background-image: radial-gradient(circle at 1px 1px, rgba(237, 238, 240, 0.05) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+::selection {
+  background: #c08a3e;
+  color: #0d1b2a;
+}
+
+:focus-visible {
+  outline: 2px solid #c08a3e;
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-[0.25em] uppercase text-brass;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
