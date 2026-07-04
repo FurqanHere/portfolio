@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDownRight, MapPin } from "lucide-react";
-import profile from "../assets/profile.PNG";
+import profile from "../assets/profile.png";
 import { profile as data, stats } from "../data/portfolioData";
 
 const chips = [
