@@ -38,8 +38,7 @@ export default function Experience() {
               className="grid gap-6 rounded-2xl border-l-2 border-brass/50 pl-8 md:grid-cols-[0.9fr_1.6fr] md:gap-12"
             >
               <div>
-                <h3 className="font-display text-2xl text-paper">{job.role}</h3>
-                <p className="mt-1 font-mono text-sm text-brass-light">{job.company}</p>
+                <h3 className="font-display text-2xl text-paper">{job.company}</h3>
                 <p className="mt-2 font-mono text-xs text-slate">{job.meta}</p>
               </div>
               <motion.ul

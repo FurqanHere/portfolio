@@ -66,15 +66,15 @@ export const toolTags = ["Git & GitHub", "Core PHP", "Chakra UI", "MongoDB", "SQ
 
 export const experience = [
   {
-    role: "Frontend Developer (React.js)",
     company: "DeviceBee Technologies",
     meta: "Remote — Dubai-based company · 1 year and 2 months",
     points: [
-      "Developed and maintained multiple client-facing websites and web portals using React.js and Chakra UI.",
-      "Delivered end-to-end frontend builds for diverse projects, including a legal services platform and its business portal for lawyers, a Nirvana website and portal, and a food-ordering web application for Omniyat.",
-      "Translated design requirements into responsive, reusable React components, ensuring consistent UI/UX across projects.",
-      "Integrated frontend applications with backend APIs and databases (MongoDB/SQL) to support dynamic content.",
-      "Managed version control and collaborative development workflows using Git and GitHub across all project repositories.",
+      "Delivered multiple client-facing websites and business portals end-to-end for international clients, using React.js and Chakra UI to build clean, production-ready interfaces.",
+      "Shipped frontend work across four different industries — legal services, luxury yacht rentals, hospitality, and talent marketplaces — adapting each build to its client's real operational workflow.",
+      "Converted design requirements into responsive, reusable React components, keeping UI/UX consistent across every project.",
+      "Connected frontend applications to backend APIs and MongoDB/SQL databases to power dynamic, real-time content.",
+      "Built and maintained REST APIs and server-side logic in Node.js, driving dynamic features across every client-facing portal.",
+      "Owned Git and GitHub workflows across the full project portfolio, keeping version control and collaboration consistent for the team.",
     ],
   },
 ];
