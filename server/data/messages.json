@@ -4,5 +4,23 @@
     "email": "furqanatiq123@gmail.com",
     "message": "Hired",
     "receivedAt": "2026-07-04T13:04:33.801Z"
+  },
+  {
+    "name": "Salman Ali",
+    "email": "salman@gmail.com",
+    "message": "Have a Job!",
+    "receivedAt": "2026-07-06T18:11:13.476Z"
+  },
+  {
+    "name": "Test User",
+    "email": "test@example.com",
+    "message": "Hello from curl!",
+    "receivedAt": "2026-07-06T18:30:18.670Z"
+  },
+  {
+    "name": "Xanthus Newman",
+    "email": "bixime@mailinator.com",
+    "message": "Cupidatat ut minima ",
+    "receivedAt": "2026-07-06T18:31:48.949Z"
   }
 ]
