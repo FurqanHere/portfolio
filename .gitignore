@@ -5,9 +5,6 @@ node_modules/
 # Build outputs
 client/dist/
 
-# Environment variables
-server/.env
-
 # OS files
 .DS_Store
 

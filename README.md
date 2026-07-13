@@ -1,9 +1,8 @@
 # Furqan Atiq — Portfolio
 
-A two-part project:
-
-- `client/` — React (Vite) + Tailwind CSS + Framer Motion frontend
-- `server/` — Node.js + Express backend for the contact form
+React (Vite) + Tailwind CSS + Framer Motion, deployed on Vercel. The contact
+form is handled by a Vercel serverless function (`client/api/contact.js`) that
+sends submissions via SMTP email — there's no separate backend to run.
 
 ## Design direction
 
@@ -19,48 +18,41 @@ hero portrait.
 
 You'll need Node.js 18+ installed.
 
-### 1. Start the backend
-
-```bash
-cd server
-npm install
-npm run dev
-```
-
-Runs on `http://localhost:4000`. Contact form submissions are saved to
-`server/data/messages.json`.
-
-### 2. Start the frontend
-
-In a second terminal:
-
 ```bash
 cd client
 npm install
 npm run dev
 ```
 
-Runs on `http://localhost:5173` and proxies `/api` requests to the backend.
+Runs on `http://localhost:5173`. The frontend loads fine this way, but plain
+`vite dev` doesn't run the `/api` serverless function — the contact form needs
+the Vercel dev server for that instead:
 
-### 3. Build for production
+```bash
+cd client
+npx vercel dev
+```
+
+This runs the Vite app and `api/contact.js` together, matching production.
+
+### Build for production
 
 ```bash
 cd client
 npm run build
 ```
 
-Outputs static files to `client/dist`, which you can deploy to any static host
-(Vercel, Netlify, etc.), with the `server/` folder deployed separately (Render,
-Railway, a VPS, etc.) — just point the frontend's API calls at your deployed
-backend URL instead of the local proxy.
+Outputs static files to `client/dist`.
 
-## Wiring up real email delivery
+## Deploying
 
-Right now `/api/contact` just saves messages to a JSON file so nothing is lost.
-To also send yourself an email, install `nodemailer` in `server/` and send from
-inside the `app.post("/api/contact", ...)` handler in `server.js`, using your
-own SMTP or provider (Gmail app password, SendGrid, Resend, etc.). Keep real
-credentials in a `.env` file — never commit them.
+Deployed on Vercel with the project root set to `client/`. Production requires
+these environment variables (`vercel env add <NAME> production`):
+
+- `SMTP_USER` — sending account (e.g. a Gmail address)
+- `SMTP_PASS` — an app password for that account, not the real login password
+- `RECIPIENT_EMAIL` — where contact form submissions get delivered
+- `SMTP_HOST` / `SMTP_PORT` — optional, default to Gmail (`smtp.gmail.com:587`)
 
 ## Updating content
 
@@ -70,5 +62,5 @@ of the site updates automatically.
 
 ## Replacing the photo
 
-Swap `client/src/assets/profile.jpg` with a new image of the same rough aspect
+Swap `client/src/assets/profile.png` with a new image of the same rough aspect
 ratio (4:5, portrait) — the layout and framing will adjust automatically.

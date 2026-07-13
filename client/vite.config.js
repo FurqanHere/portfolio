@@ -6,8 +6,5 @@ export default defineConfig({
   base: "./", // Relative paths for GitHub Pages
   server: {
     port: 5173,
-    proxy: {
-      "/api": "http://localhost:4000",
-    },
   },
 });
