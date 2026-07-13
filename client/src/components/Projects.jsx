@@ -66,39 +66,11 @@ function ProjectCard({ project, index }) {
     </>
   );
 
-  if (project.link) {
-    return (
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noreferrer"
-        className="block"
-      >
-        <motion.article
-          ref={ref}
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7, delay: index * 0.08, ease: EASE }}
-          onMouseMove={handleMove}
-          onMouseLeave={handleLeave}
-          style={{
-            transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-            transition: "transform 0.25s ease-out",
-          }}
-          className="group relative flex cursor-pointer flex-col justify-between rounded-2xl border border-ink-line bg-ink-soft p-7 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30"
-        >
-          {CardContent}
-        </motion.article>
-      </a>
-    );
-  }
-
-  return (
+  const article = (
     <motion.article
       ref={ref}
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 32, scale: 0.97 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, delay: index * 0.08, ease: EASE }}
       onMouseMove={handleMove}
@@ -107,11 +79,23 @@ function ProjectCard({ project, index }) {
         transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: "transform 0.25s ease-out",
       }}
-      className="group relative flex flex-col justify-between rounded-2xl border border-ink-line bg-ink-soft p-7 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30"
+      className="gradient-border-panel group relative flex h-full cursor-pointer flex-col justify-between bg-ink-soft p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-black/40"
     >
       {CardContent}
     </motion.article>
   );
+
+  if (project.link) {
+    return (
+      <div className="gradient-border h-full">
+        <a href={project.link} target="_blank" rel="noreferrer" className="block h-full">
+          {article}
+        </a>
+      </div>
+    );
+  }
+
+  return <div className="gradient-border h-full">{article}</div>;
 }
 
 export default function Projects() {
