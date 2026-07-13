@@ -6,9 +6,11 @@ import { profile as data, stats } from "../data/portfolioData";
 const EASE = [0.16, 1, 0.3, 1];
 
 const chips = [
-  { label: "React.js", top: "6%", left: "-8%", delay: 0.9 },
-  { label: "Node.js", top: "38%", left: "88%", delay: 1.05 },
-  { label: "MongoDB", top: "82%", left: "-10%", delay: 1.2 },
+  { label: "React.js", top: "6%", left: "-4%", delay: 0.9 },
+  { label: "AI Agents", top: "22%", left: "-6%", delay: 1.0 },
+  { label: "Node.js", top: "38%", left: "80%", delay: 1.1 },
+  { label: "Automations", top: "60%", left: "78%", delay: 1.2 },
+  { label: "MongoDB", top: "82%", left: "-4%", delay: 1.3 },
 ];
 
 export default function Hero() {
@@ -102,7 +104,7 @@ export default function Hero() {
             </div>
             <p className="mt-3 flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.15em] text-slate">
               <span>Lahore, PK</span>
-              <span className="text-brass">// full-stack</span>
+              <span className="shrink-0 text-brass">// AI + Automation</span>
             </p>
           </motion.div>
 

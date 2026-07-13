@@ -47,7 +47,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="/Furqan-Atiq-CV.docx"
+              href="/Furqan-Atiq-CV.pdf"
               download
               className="rounded-full border border-brass/70 px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] text-brass-light transition-colors hover:bg-brass hover:text-ink"
             >
