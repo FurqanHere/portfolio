@@ -7,7 +7,7 @@ export const profile = {
   github: "https://github.com/FurqanHere",
   githubLabel: "github.com/FurqanHere",
   summary:
-    "Full stack developer with 1 year and 2 months of professional remote experience building responsive, production-grade web applications using React.js and Node.js. Skilled in Chakra UI, MongoDB, SQL, and core PHP, with hands-on experience delivering multiple client-facing websites and portals end-to-end. BSCS graduate seeking a full stack role in a JavaScript-centric environment.",
+    "Full stack developer with 1 year and 2 months of professional remote experience building responsive, production-grade web applications using React.js and Node.js. Skilled in Chakra UI, MongoDB, SQL, and core PHP, with hands-on experience delivering multiple client-facing websites and portals end-to-end. Also working on AI Agents and Automations — designing autonomous agents that handle customer support and business operations, and building custom automation pipelines that integrate business tools and social platforms to cut out repetitive manual work. BSCS graduate seeking a full stack role in a JavaScript-centric environment.",
 };
 
 export const stats = [
