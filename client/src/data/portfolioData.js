@@ -1,13 +1,13 @@
 export const profile = {
   name: "Furqan Atiq",
-  title: "Full Stack Developer",
-  stack: "React.js & Node.js",
+  title: "AI Agents & Automation Engineer",
+  stack: "Full Stack Development",
   location: "Lahore, Pakistan",
   email: "furqanatiq123@gmail.com",
   github: "https://github.com/FurqanHere",
   githubLabel: "github.com/FurqanHere",
   summary:
-    "Full stack developer fluent across the JavaScript ecosystem — building interfaces and APIs with React.js and Node.js, and working with MongoDB, SQL, Supabase, and core PHP for data and legacy systems. Alongside traditional web development, I design AI agents that automate business operations and customer support, and build automation pipelines that connect business tools and social media platforms to eliminate repetitive manual work. 1 year and 2 months of professional remote experience delivering production-grade, client-facing websites and portals end-to-end. BSCS graduate seeking a full stack role in a JavaScript-centric environment.",
+    "Full stack developer with a primary focus on AI Agents and Automation — designing autonomous agents that handle customer support and complex business operations, and building automation pipelines that connect business tools and social media platforms to cut out repetitive manual work and reduce operating costs. Also fluent across the JavaScript ecosystem, building production-grade interfaces and APIs with React.js, Node.js, MongoDB, SQL, Supabase, and core PHP. 1 year and 2 months of professional remote experience delivering client-facing websites and portals end-to-end. BSCS graduate seeking a role centered on AI Agents, Automation, and full stack development.",
 };
 
 export const stats = [

@@ -12,6 +12,31 @@ body {
   background-size: 28px 28px;
 }
 
+/* Cursor-reactive dot grid: a brighter copy of the body's dot pattern,
+   revealed only inside a soft circle that tracks the pointer (position
+   set via --mx/--my custom properties from a mousemove listener). */
+:root {
+  --mx: 50vw;
+  --my: 50vh;
+}
+
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(192, 138, 62, 0.55) 1.4px, transparent 0);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(circle 220px at var(--mx) var(--my), black 0%, transparent 75%);
+  mask-image: radial-gradient(circle 220px at var(--mx) var(--my), black 0%, transparent 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-glow {
+    display: none;
+  }
+}
+
 ::selection {
   background: #c08a3e;
   color: #0d1b2a;
