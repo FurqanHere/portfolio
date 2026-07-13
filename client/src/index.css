@@ -26,6 +26,46 @@ body {
   @apply font-mono text-xs tracking-[0.25em] uppercase text-brass;
 }
 
+/* Animated gradient-border: a rotating conic glow clipped to a thin ring
+   around the card, revealed by an opaque inset panel sitting on top. */
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+  border-radius: 1rem;
+  padding: 1px;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -60%;
+  z-index: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    theme("colors.brass") 12%,
+    theme("colors.brass-light") 20%,
+    theme("colors.teal") 32%,
+    transparent 46%,
+    transparent 100%
+  );
+  animation: gradient-spin 5s linear infinite;
+}
+
+.gradient-border-panel {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: calc(1rem - 1px);
+}
+
+@keyframes gradient-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

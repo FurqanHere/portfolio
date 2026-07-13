@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Github, Mail, MapPin, Send } from "lucide-react";
 import { profile } from "../data/portfolioData";
 
+const EASE = [0.16, 1, 0.3, 1];
+
 const initialForm = { name: "", email: "", message: "" };
 
 export default function Contact() {
@@ -36,19 +38,19 @@ export default function Contact() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="eyebrow"
         >
-          04 — Contact
+          05 — Contact
         </motion.p>
 
         <div className="mt-6 grid gap-16 md:grid-cols-[0.9fr_1.1fr]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.05 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, delay: 0.05, ease: EASE }}
           >
             <h2 className="max-w-md font-display text-3xl leading-snug text-paper sm:text-4xl">
               Have a build in mind? Let's talk about it.
@@ -80,12 +82,12 @@ export default function Contact() {
           </motion.div>
 
           <motion.form
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
             onSubmit={handleSubmit}
-            className="space-y-5 border border-ink-line bg-ink-soft p-7"
+            className="space-y-5 rounded-2xl border border-ink-line bg-ink-soft p-7 shadow-xl shadow-black/20"
           >
             <div>
               <label htmlFor="name" className="font-mono text-xs uppercase tracking-[0.15em] text-slate">
@@ -97,7 +99,7 @@ export default function Contact() {
                 required
                 value={form.name}
                 onChange={handleChange}
-                className="mt-2 w-full border border-ink-line bg-ink px-4 py-3 text-sm text-paper outline-none focus:border-brass"
+                className="mt-2 w-full rounded-xl border border-ink-line bg-ink px-4 py-3 text-sm text-paper outline-none transition-colors focus:border-brass"
                 placeholder="Your name"
               />
             </div>
@@ -112,7 +114,7 @@ export default function Contact() {
                 required
                 value={form.email}
                 onChange={handleChange}
-                className="mt-2 w-full border border-ink-line bg-ink px-4 py-3 text-sm text-paper outline-none focus:border-brass"
+                className="mt-2 w-full rounded-xl border border-ink-line bg-ink px-4 py-3 text-sm text-paper outline-none transition-colors focus:border-brass"
                 placeholder="you@company.com"
               />
             </div>
@@ -127,7 +129,7 @@ export default function Contact() {
                 rows={4}
                 value={form.message}
                 onChange={handleChange}
-                className="mt-2 w-full resize-none border border-ink-line bg-ink px-4 py-3 text-sm text-paper outline-none focus:border-brass"
+                className="mt-2 w-full resize-none rounded-xl border border-ink-line bg-ink px-4 py-3 text-sm text-paper outline-none transition-colors focus:border-brass"
                 placeholder="Tell me about the project or role..."
               />
             </div>
@@ -135,7 +137,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="inline-flex items-center gap-2 bg-brass px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5 disabled:opacity-60"
+              className="inline-flex items-center gap-2 rounded-full bg-brass px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5 disabled:opacity-60"
             >
               {status === "sending" ? "Sending..." : "Send message"}
               <Send size={14} />

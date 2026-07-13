@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
   { href: "#contact", label: "Contact" },
@@ -27,7 +28,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <a
           href="#top"
-          className="flex h-10 w-10 items-center justify-center border border-brass/60 font-display text-sm text-brass"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-brass/60 font-display text-sm text-brass"
           aria-label="Furqan Atiq — home"
         >
           FA
@@ -48,7 +49,7 @@ export default function Navbar() {
             <a
               href="/Furqan-Atiq-CV.pdf"
               download
-              className="border border-brass/70 px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] text-brass-light transition-colors hover:bg-brass hover:text-ink"
+              className="rounded-full border border-brass/70 px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] text-brass-light transition-colors hover:bg-brass hover:text-ink"
             >
               Resume
             </a>

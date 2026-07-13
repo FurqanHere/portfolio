@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
-import { education, skillGroups } from "../data/portfolioData";
+import { ArrowDownRight, GraduationCap } from "lucide-react";
+import { education } from "../data/portfolioData";
+
+const EASE = [0.16, 1, 0.3, 1];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0 },
 };
 
@@ -13,9 +15,9 @@ export default function About() {
       <motion.p
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-80px" }}
         variants={fadeUp}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6, ease: EASE }}
         className="eyebrow"
       >
         01 — About
@@ -25,9 +27,9 @@ export default function About() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
-          transition={{ duration: 0.6, delay: 0.05 }}
+          transition={{ duration: 0.7, delay: 0.05, ease: EASE }}
         >
           <h2 className="max-w-lg font-display text-3xl leading-snug text-paper sm:text-4xl">
             Frontend-led full stack development, built for real client operations.
@@ -56,28 +58,35 @@ export default function About() {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="space-y-8"
+          transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
         >
-          {skillGroups.map((group) => (
-            <div key={group.label}>
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate">
-                {group.label}
+          <div className="gradient-border">
+            <div className="gradient-border-panel bg-ink-soft p-7">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-brass-light">
+                Now expanding into
               </p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="border border-ink-line bg-ink-soft px-3 py-1.5 text-sm text-paper"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              <h3 className="mt-3 font-display text-2xl text-paper">
+                AI Agents &amp; Automation
+              </h3>
+              <p className="mt-4 leading-relaxed text-slate">
+                Beyond frontend and backend delivery, I now design autonomous AI
+                agents and automation pipelines that take repetitive operations
+                off a business's plate entirely.
+              </p>
+              <a
+                href="#skills"
+                className="group mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-brass-light transition-colors hover:text-brass"
+              >
+                See core skills
+                <ArrowDownRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+                />
+              </a>
             </div>
-          ))}
+          </div>
         </motion.div>
       </div>
     </section>

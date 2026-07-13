@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
 import { experience } from "../data/portfolioData";
 
+const EASE = [0.16, 1, 0.3, 1];
+
+const list = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, x: -12 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: EASE } },
+};
+
 export default function Experience() {
   return (
     <section id="experience" className="border-t border-ink-line bg-ink-soft/40">
@@ -8,36 +20,46 @@ export default function Experience() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="eyebrow"
         >
-          02 — Experience
+          03 — Experience
         </motion.p>
 
         <div className="mt-10 space-y-14">
           {experience.map((job) => (
             <motion.div
               key={job.company}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="grid gap-6 border-l-2 border-brass/50 pl-8 md:grid-cols-[0.9fr_1.6fr] md:gap-12"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, ease: EASE }}
+              className="grid gap-6 rounded-2xl border-l-2 border-brass/50 pl-8 md:grid-cols-[0.9fr_1.6fr] md:gap-12"
             >
               <div>
                 <h3 className="font-display text-2xl text-paper">{job.role}</h3>
                 <p className="mt-1 font-mono text-sm text-brass-light">{job.company}</p>
                 <p className="mt-2 font-mono text-xs text-slate">{job.meta}</p>
               </div>
-              <ul className="space-y-3">
+              <motion.ul
+                variants={list}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-80px" }}
+                className="space-y-3"
+              >
                 {job.points.map((point, i) => (
-                  <li key={i} className="flex gap-3 text-sm leading-relaxed text-slate">
+                  <motion.li
+                    key={i}
+                    variants={item}
+                    className="flex gap-3 text-sm leading-relaxed text-slate"
+                  >
                     <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brass" />
                     {point}
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </motion.div>
           ))}
         </div>

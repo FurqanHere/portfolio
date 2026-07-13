@@ -27,20 +27,42 @@ export const education = [
   },
 ];
 
-export const skillGroups = [
+export const coreSkills = [
   {
+    icon: "Code2",
     label: "Frontend",
-    skills: ["React.js", "Chakra UI", "Responsive Web Design"],
+    tagline: "Interfaces that convert",
+    description:
+      "Responsive, pixel-perfect React interfaces that make products feel fast and trustworthy — directly improving conversion, retention, and how clients perceive your brand.",
+    tags: ["React.js", "Chakra UI", "Responsive Design"],
   },
   {
+    icon: "Server",
     label: "Backend",
-    skills: ["Node.js", "Core PHP", "REST APIs"],
+    tagline: "Systems that hold up",
+    description:
+      "Reliable Node.js APIs and data layers built to handle real production traffic and business logic — so the platform keeps running as you scale, not just in the demo.",
+    tags: ["Node.js", "REST APIs", "MongoDB / SQL"],
   },
   {
-    label: "Data & Tools",
-    skills: ["MongoDB", "SQL", "Git & GitHub"],
+    icon: "Bot",
+    label: "AI Agents",
+    tagline: "Operations on autopilot",
+    description:
+      "Designing and deploying autonomous AI agents that handle complex business operations, customer support, and multi-step workflows — cutting response times and headcount costs.",
+    tags: ["Autonomous Agents", "LLM Integration", "24/7 Support"],
+  },
+  {
+    icon: "Workflow",
+    label: "Automations",
+    tagline: "Time back, at scale",
+    description:
+      "Building custom integration pipelines that automate repetitive tasks across business tools and social platforms — freeing teams to focus on high-value work instead of manual busywork.",
+    tags: ["Workflow Pipelines", "API Integrations", "Social Automation"],
   },
 ];
+
+export const toolTags = ["Git & GitHub", "Core PHP", "Chakra UI", "MongoDB", "SQL"];
 
 export const experience = [
   {

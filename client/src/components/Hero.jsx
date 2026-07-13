@@ -3,6 +3,8 @@ import { ArrowDownRight, MapPin } from "lucide-react";
 import profile from "../assets/profile.png";
 import { profile as data, stats } from "../data/portfolioData";
 
+const EASE = [0.16, 1, 0.3, 1];
+
 const chips = [
   { label: "React.js", top: "6%", left: "-8%", delay: 0.9 },
   { label: "Node.js", top: "38%", left: "88%", delay: 1.05 },
@@ -13,14 +15,23 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pb-16 pt-32 md:px-10"
+      className="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-center overflow-hidden px-6 pb-16 pt-32 md:px-10"
     >
-      <div className="grid items-center gap-14 md:grid-cols-[1.15fr_0.85fr]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 right-0 -z-0 h-96 w-96 rounded-full bg-brass/10 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-0 -z-0 h-72 w-72 rounded-full bg-teal/10 blur-3xl"
+      />
+
+      <div className="relative grid items-center gap-14 md:grid-cols-[1.15fr_0.85fr]">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, ease: EASE }}
             className="eyebrow mb-6 flex items-center gap-2"
           >
             <MapPin size={14} />
@@ -50,14 +61,14 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 bg-brass px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-full bg-brass px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-ink shadow-lg shadow-brass/20 transition-all hover:-translate-y-0.5 hover:shadow-brass/30"
             >
               View the work
               <ArrowDownRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 border border-ink-line px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:border-brass hover:text-brass-light"
+              className="inline-flex items-center gap-2 rounded-full border border-ink-line px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:border-brass hover:text-brass-light"
             >
               Get in touch
             </a>
@@ -79,10 +90,10 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 24, rotate: -4 }}
             animate={{ opacity: 1, y: 0, rotate: -2 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative border border-brass/40 bg-ink-soft p-3"
+            transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
+            className="relative rounded-2xl border border-brass/40 bg-ink-soft p-3 shadow-2xl shadow-black/30"
           >
-            <div className="border border-ink-line">
+            <div className="overflow-hidden rounded-xl border border-ink-line">
               <img
                 src={profile}
                 alt="Portrait of Furqan Atiq"
@@ -100,8 +111,8 @@ export default function Hero() {
               key={chip.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: chip.delay }}
-              className="absolute hidden select-none border border-ink-line bg-ink-soft px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-teal shadow-lg shadow-black/30 sm:block"
+              transition={{ duration: 0.6, delay: chip.delay, ease: EASE }}
+              className="absolute hidden select-none rounded-full border border-ink-line bg-ink-soft px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-teal shadow-lg shadow-black/30 sm:block"
               style={{ top: chip.top, left: chip.left }}
             >
               {chip.label}

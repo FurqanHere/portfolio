@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "../data/portfolioData";
 
+const EASE = [0.16, 1, 0.3, 1];
+
 function ProjectCard({ project, index }) {
   const ref = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
@@ -21,14 +23,14 @@ function ProjectCard({ project, index }) {
   const CardContent = (
     <>
       <span
-        className="absolute inset-x-0 top-0 h-[3px]"
+        className="absolute inset-x-0 top-0 h-[3px] rounded-t-2xl"
         style={{ backgroundColor: project.accent }}
       />
 
       <div>
         <div className="flex items-start justify-between gap-4">
           <p
-            className="font-mono text-[11px] uppercase tracking-[0.15em]"
+            className="rounded-full border border-current/20 px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.15em]"
             style={{ color: project.accent }}
           >
             {project.industry}
@@ -45,7 +47,7 @@ function ProjectCard({ project, index }) {
           {project.tech.map((t) => (
             <span
               key={t}
-              className="border border-ink-line px-2.5 py-1 font-mono text-[11px] text-teal"
+              className="rounded-full border border-ink-line px-2.5 py-1 font-mono text-[11px] text-teal"
             >
               {t}
             </span>
@@ -74,17 +76,17 @@ function ProjectCard({ project, index }) {
       >
         <motion.article
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5, delay: index * 0.08 }}
+          transition={{ duration: 0.7, delay: index * 0.08, ease: EASE }}
           onMouseMove={handleMove}
           onMouseLeave={handleLeave}
           style={{
             transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
             transition: "transform 0.25s ease-out",
           }}
-          className="group relative flex flex-col justify-between border border-ink-line bg-ink-soft p-7 cursor-pointer"
+          className="group relative flex cursor-pointer flex-col justify-between rounded-2xl border border-ink-line bg-ink-soft p-7 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30"
         >
           {CardContent}
         </motion.article>
@@ -95,17 +97,17 @@ function ProjectCard({ project, index }) {
   return (
     <motion.article
       ref={ref}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
+      transition={{ duration: 0.7, delay: index * 0.08, ease: EASE }}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       style={{
         transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: "transform 0.25s ease-out",
       }}
-      className="group relative flex flex-col justify-between border border-ink-line bg-ink-soft p-7"
+      className="group relative flex flex-col justify-between rounded-2xl border border-ink-line bg-ink-soft p-7 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30"
     >
       {CardContent}
     </motion.article>
@@ -118,17 +120,17 @@ export default function Projects() {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.6, ease: EASE }}
         className="eyebrow"
       >
-        03 — Selected work
+        04 — Selected work
       </motion.p>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.05 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.6, delay: 0.05, ease: EASE }}
         className="mt-4 max-w-xl font-display text-3xl text-paper sm:text-4xl"
       >
         Four industries, one frontend discipline.
