@@ -32,14 +32,15 @@ export default function About() {
           transition={{ duration: 0.7, delay: 0.05, ease: EASE }}
         >
           <h2 className="max-w-lg font-display text-3xl leading-snug text-paper sm:text-4xl">
-            Frontend-led full stack development, built for real client operations.
+            AI Agents & Automation expert, backed by full stack engineering.
           </h2>
           <p className="mt-6 max-w-lg leading-relaxed text-slate">
-            Over the past year I've shipped production platforms across four different
-            industries — legal services, luxury marine rentals, hospitality, and talent
-            marketplaces — each with its own workflows, payment flows, and languages. I
-            care about translating a business's actual process into components that hold
-            up in production, not just a working demo.
+            I design autonomous AI agents and automation pipelines — including full
+            social media account management — that take repetitive operations off a
+            business's plate entirely. That expertise is backed by a year shipping
+            production full stack platforms across four industries — legal services,
+            luxury marine rentals, hospitality, and talent marketplaces — each with its
+            own workflows, payment flows, and languages.
           </p>
 
           <div className="mt-10 space-y-4">
@@ -65,15 +66,15 @@ export default function About() {
           <div className="gradient-border">
             <div className="gradient-border-panel bg-ink-soft p-7">
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-brass-light">
-                Now expanding into
+                Also delivering
               </p>
               <h3 className="mt-3 font-display text-2xl text-paper">
-                AI Agents &amp; Automation
+                Full Stack Development
               </h3>
               <p className="mt-4 leading-relaxed text-slate">
-                Beyond frontend and backend delivery, I now design autonomous AI
-                agents and automation pipelines that take repetitive operations
-                off a business's plate entirely.
+                End-to-end product builds — React interfaces, Node.js APIs, and
+                MongoDB/SQL data layers — shipped for real client operations
+                across four industries.
               </p>
               <a
                 href="#skills"

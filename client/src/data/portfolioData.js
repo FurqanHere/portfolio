@@ -1,13 +1,13 @@
 export const profile = {
   name: "Furqan Atiq",
-  title: "AI Agents & Automation Engineer",
+  title: "AI Agents & Automation Expert",
   stack: "Full Stack Development",
   location: "Lahore, Pakistan",
   email: "furqanatiq123@gmail.com",
   github: "https://github.com/FurqanHere",
   githubLabel: "github.com/FurqanHere",
   summary:
-    "Full stack developer with a primary focus on AI Agents and Automation — designing autonomous agents that handle customer support and complex business operations, and building automation pipelines that connect business tools and social media platforms to cut out repetitive manual work and reduce operating costs. Also fluent across the JavaScript ecosystem, building production-grade interfaces and APIs with React.js, Node.js, MongoDB, SQL, Supabase, and core PHP. 1 year and 2 months of professional remote experience delivering client-facing websites and portals end-to-end. BSCS graduate seeking a role centered on AI Agents, Automation, and full stack development.",
+    "AI Agents & Automation expert — I design autonomous agents that run customer support and complex business operations end-to-end, and build automation pipelines that connect business tools and social platforms to cut out repetitive manual work and reduce operating costs. I also manage and automate social media accounts, keeping content, scheduling, and engagement running without manual upkeep. Alongside that, I'm a full stack developer fluent across the JavaScript ecosystem, building production-grade interfaces and APIs with React.js, Node.js, MongoDB, SQL, Supabase, and core PHP. 1 year and 2 months of professional remote experience delivering client-facing websites and portals end-to-end. BSCS graduate focused on AI Agents, Automation, and full stack development.",
 };
 
 export const stats = [
@@ -29,6 +29,22 @@ export const education = [
 
 export const coreSkills = [
   {
+    icon: "Bot",
+    label: "AI Agents",
+    tagline: "Operations on autopilot",
+    description:
+      "Designing and deploying autonomous AI agents that handle complex business operations, customer support, and multi-step workflows — cutting response times and headcount costs, 24/7.",
+    tags: ["Autonomous Agents", "LLM Integration", "24/7 Support"],
+  },
+  {
+    icon: "Workflow",
+    label: "Automations",
+    tagline: "Time back, at scale",
+    description:
+      "Building custom automation pipelines and managing social media accounts end-to-end — scheduling, engagement, and cross-tool integrations that free teams from manual busywork.",
+    tags: ["Workflow Pipelines", "Social Media Management", "API Integrations"],
+  },
+  {
     icon: "Code2",
     label: "Frontend",
     tagline: "Interfaces that convert",
@@ -44,22 +60,6 @@ export const coreSkills = [
       "Reliable Node.js APIs and data layers built to handle real production traffic and business logic — so the platform keeps running as you scale, not just in the demo.",
     tags: ["Node.js", "REST APIs", "MongoDB / SQL"],
   },
-  {
-    icon: "Bot",
-    label: "AI Agents",
-    tagline: "Operations on autopilot",
-    description:
-      "Designing and deploying autonomous AI agents that handle complex business operations, customer support, and multi-step workflows — cutting response times and headcount costs.",
-    tags: ["Autonomous Agents", "LLM Integration", "24/7 Support"],
-  },
-  {
-    icon: "Workflow",
-    label: "Automations",
-    tagline: "Time back, at scale",
-    description:
-      "Building custom integration pipelines that automate repetitive tasks across business tools and social platforms — freeing teams to focus on high-value work instead of manual busywork.",
-    tags: ["Workflow Pipelines", "API Integrations", "Social Automation"],
-  },
 ];
 
 export const toolTags = ["Git & GitHub", "Core PHP", "Chakra UI", "MongoDB", "SQL"];
@@ -69,6 +69,8 @@ export const experience = [
     company: "DeviceBee Technologies",
     meta: "Remote — Dubai-based company · 1 year and 2 months",
     points: [
+      "Designed and deployed AI agents that automate customer support and multi-step business workflows, cutting manual handling time on repetitive client requests.",
+      "Built automation pipelines connecting business tools and social media platforms — including AI-assisted social media account management — to remove day-to-day operational overhead.",
       "Delivered multiple client-facing websites and business portals end-to-end for international clients, using React.js and Chakra UI to build clean, production-ready interfaces.",
       "Shipped frontend work across four different industries — legal services, luxury yacht rentals, hospitality, and talent marketplaces — adapting each build to its client's real operational workflow.",
       "Converted design requirements into responsive, reusable React components, keeping UI/UX consistent across every project.",
@@ -80,6 +82,26 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    id: "ai-support-agent",
+    industry: "AI Agents",
+    name: "Autonomous Customer Support Agent",
+    description:
+      "AI agent that independently handles customer inquiries, support tickets, and multi-step troubleshooting across chat channels — resolving common cases without human intervention and escalating only what genuinely needs a person, cutting response times and support headcount costs.",
+    tech: ["LLM Integration", "Agent Orchestration", "API Integrations"],
+    platforms: "Web · Chat",
+    accent: "#C08A3E",
+  },
+  {
+    id: "social-automation",
+    industry: "Automation",
+    name: "AI-Powered Social Media Automation Suite",
+    description:
+      "Automation pipeline that manages social media accounts end-to-end using AI — generating and scheduling content, handling engagement and replies, and syncing activity across platforms so accounts stay active without manual, day-to-day upkeep.",
+    tech: ["Workflow Automation", "AI Content Generation", "Social APIs"],
+    platforms: "Cross-platform",
+    accent: "#4FD1C5",
+  },
   {
     id: "legal",
     industry: "Legal Tech",

@@ -117,7 +117,7 @@ export default function Projects() {
         transition={{ duration: 0.6, delay: 0.05, ease: EASE }}
         className="mt-4 max-w-xl font-display text-3xl text-paper sm:text-4xl"
       >
-        Four industries, one frontend discipline.
+        AI Agents and Automation leading the work, full stack behind it.
       </motion.h2>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2">

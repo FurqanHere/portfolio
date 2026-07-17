@@ -56,7 +56,7 @@ export default function Contact() {
               Have a build in mind? Let's talk about it.
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-slate">
-              Open to full stack and frontend-focused roles, remote or in Lahore.
+              Open to AI Agents, Automation, and full stack roles, remote or in Lahore.
               I'll usually reply within a day.
             </p>
 

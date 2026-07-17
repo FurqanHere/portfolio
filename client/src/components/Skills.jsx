@@ -88,7 +88,7 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.05, ease: EASE }}
           className="mt-4 max-w-xl font-display text-3xl text-paper sm:text-4xl"
         >
-          Full-stack execution, now with AI-driven leverage.
+          AI Agents & Automation at the core, full-stack execution behind it.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -97,9 +97,9 @@ export default function Skills() {
           transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
           className="mt-4 max-w-lg leading-relaxed text-slate"
         >
-          Four disciplines that combine to ship products and cut operating costs —
-          from the interface, through the backend, to the agents and pipelines
-          that keep running long after launch.
+          Four disciplines that combine to cut operating costs and ship products —
+          from autonomous agents and automation pipelines, through to the
+          interface and backend that support them.
         </motion.p>
 
         <motion.div
