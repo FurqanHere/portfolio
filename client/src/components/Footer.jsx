@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Store, Globe } from "lucide-react";
+import { Github, Linkedin, BadgeCheck, Globe } from "lucide-react";
 import { profile } from "../data/portfolioData";
 
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/FurqanHere" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/furqan-atiq/" },
-  { icon: Store, label: "Fiverr", href: "https://www.fiverr.com/furqan_here_" },
+  { icon: BadgeCheck, label: "Fiverr", href: "https://www.fiverr.com/furqan_here_" },
   { icon: Globe, label: "Portfolio", href: "https://iamfurqan.vercel.app/" },
 ];
 
